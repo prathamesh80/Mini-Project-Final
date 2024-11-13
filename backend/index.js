@@ -10,14 +10,22 @@ import applicationRoute from "./routes/application.route.js";
 
 dotenv.config({});
 
+
 const app = express();
+
+
+const corsOptions = {
+    origin: 'https://work-buddy-frontend.vercel.app', // specify allowed origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // specify allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // specify allowed headers
+  };
+  
+  app.use(cors(corsOptions));
 
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-
-app.use(cors({ origin: '*' }));
 
 
 const PORT = process.env.PORT || 3000;
