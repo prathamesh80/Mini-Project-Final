@@ -50,7 +50,7 @@ const CompanySetup = () => {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                withCredentials: true
+                
             });
             if (res.data.success) {
                 toast.success(res.data.message);

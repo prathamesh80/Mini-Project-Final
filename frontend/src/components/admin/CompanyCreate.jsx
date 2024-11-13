@@ -20,7 +20,7 @@ const CompanyCreate = () => {
                 headers:{
                     'Content-Type':'application/json'
                 },
-                withCredentials:true
+                
             });
             if(res?.data?.success){
                 dispatch(setSingleCompany(res.data.company));

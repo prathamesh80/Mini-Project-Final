@@ -50,7 +50,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                withCredentials: true
+                
             });
             if (res.data.success) {
                 dispatch(setUser(res.data.user));
