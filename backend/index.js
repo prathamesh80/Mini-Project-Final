@@ -14,7 +14,7 @@ dotenv.config({});
 const app = express();
 
 const corsOptions = {
-    origin: 'https://work-buddy-frontend.vercel.app', // specify allowed origin
+    origin: ['https://work-buddy-frontend.vercel.app', 'http://localhost:8000'], // specify allowed origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // specify allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'] // specify allowed headers
 };
