@@ -16,12 +16,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
-    origin:'https://work-buddy-frontend.vercel.app/',
-    credentials:true
-}
 
-app.use(cors(corsOptions));
+app.use(cors({ origin: '*' }));
+
 
 const PORT = process.env.PORT || 3000;
 
