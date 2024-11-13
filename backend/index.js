@@ -16,7 +16,8 @@ const app = express();
 const corsOptions = {
     origin: ['https://work-buddy-frontend.vercel.app', 'http://localhost:8000'], // specify allowed origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // specify allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // specify allowed headers
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true // specify allowed headers
 };
   
 app.use(cors(corsOptions));
